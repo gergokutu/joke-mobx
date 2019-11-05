@@ -5,24 +5,27 @@ import { incject, observer, inject } from 'mobx-react'
 @observer
 class Jokes extends Component {
   state = {
-    punchline: false
+    showPunchline: false
   }
 
   render() {
     // how to solve that display an element after delay
-    // setTimeout works only rendered element
+    // a local state needed » not show / show the puncline
+    // setTimeout works only on rendered element
     setTimeout(() => {
-      this.setState({punchline: true})
+      this.setState({showPunchline: true})
     }, 2000) 
 
     return (
       <div className='joke'>
-        {!this.state.punchline && 
+        {/* if showPunchline false » show only the setup */}
+        {!this.state.showPunchline && 
           <div>
             <p>{this.props.JokeStore.jokes.setup}</p>
           </div>}
-          
-        {this.state.punchline && 
+
+        {/* if showPunchline true » show both the setup and punchline */} 
+        {this.state.showPunchline && 
           <div>
             <p>{this.props.JokeStore.jokes.setup}</p>
             <p>{this.props.JokeStore.jokes.punchline}</p>
