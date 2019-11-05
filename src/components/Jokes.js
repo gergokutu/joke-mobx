@@ -6,8 +6,9 @@ import { incject, observer, inject } from 'mobx-react'
 class Jokes extends Component {
   render() {
     return (
-      <div>Number of jokes: 
-        <strong> {this.props.JokeStore.countJokes}</strong>
+      <div className='joke'>
+        <p>{this.props.JokeStore.jokes.setup}</p>
+        <p>{this.props.JokeStore.jokes.punchline}</p>
       </div>
     )
   }
