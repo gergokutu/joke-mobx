@@ -8,10 +8,17 @@ class Jokes extends Component {
     showPunchline: false
   }
 
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     this.setState({showPunchline: true})
+  //   }, 2000) 
+  // }
+
   render() {
-    // how to solve that display an element after delay
+    // how to solve that display an element after few sec
     // a local state needed » not show / show the puncline
     // setTimeout works only on rendered element
+    // it works in the componentDidMount as well
     setTimeout(() => {
       this.setState({showPunchline: true})
     }, 2000) 
