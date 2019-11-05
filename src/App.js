@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      HELLOOOO
-    </div>
-  );
+import Jokes from './components/Jokes'
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Jokes />
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -5,10 +5,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'mobx-react';
-import Jokestore from './stores/JokeStore'
+import JokeStore from './stores/JokeStore'
 
 const Root = (
-  <Provider Jokestore={Jokestore}>
+  <Provider JokeStore={JokeStore}>
     <App />
   </Provider>
 )
