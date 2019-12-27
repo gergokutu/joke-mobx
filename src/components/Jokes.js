@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { incject, observer, inject } from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 
 @inject('JokeStore')
 @observer
